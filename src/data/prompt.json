@@ -1,0 +1,78 @@
+[{
+    "id":1, 
+    "prompt":"What happened today?",
+    "type":"General"
+},{
+    "id":2, 
+    "prompt":"What was the best thing that happened today?",
+    "type":"General"
+},{
+    "id":3, 
+    "prompt":"What was the worst thing that happened today?",
+    "type":"General"
+},{
+    "id":4, 
+    "prompt":"What was the most interesting thing I saw or heard today?",
+    "type":"General"
+},{
+    "id":5, 
+    "prompt":" What am I grateful for today?",
+    "type":"General"
+},{
+    "id":6, 
+    "prompt":" What did I learn today?",
+    "type":"General"
+},{
+    "id":7, 
+    "prompt":"What was the most fun thing I did today?",
+    "type":"General"
+},{
+    "id":8, 
+    "prompt":"What was the most surprising thing that happened today?",
+    "type":"General"
+},{
+    "id":9, 
+    "prompt":"What did I do today that I am proud of?",
+    "type":"General"
+},{
+    "id":10, 
+    "prompt":"What is the current problem or challenge I am facing?",
+    "type":"Brainstorming"
+},{
+    "id":11, 
+    "prompt":"What are my goals and objectives related to this problem or challenge?",
+    "type":"Brainstorming"
+},{
+    "id":12, 
+    "prompt":"What are some potential solutions to this problem or challenge?",
+    "type":"Brainstorming"
+},{
+    "id":13, 
+    "prompt":"What are some creative and unconventional solutions I can consider?",
+    "type":"Brainstorming"
+},{
+    "id":14, 
+    "prompt":"What are some pros and cons of each potential solution?",
+    "type":"Brainstorming"
+},{
+    "id":15, 
+    "prompt":"How can I collaborate with others to find a solution?",
+    "type":"Brainstorming"
+},{
+    "id":16, 
+    "prompt":"What are some resources I can utilize to help solve this problem or challenge?",
+    "type":"Brainstorming"
+},{
+    "id":17, 
+    "prompt":"How can I apply my skills, knowledge, and experience to this problem or challenge?",
+    "type":"Brainstorming"
+},{
+    "id":18, 
+    "prompt":" What are some potential roadblocks or challenges to implementing a solution, and how can I overcome them?",
+    "type":"Brainstorming"
+},{
+    "id":19, 
+    "prompt":"How can I prioritize and organize my thoughts and ideas to effectively solve this problem or challenge?",
+    "type":"Brainstorming"
+}
+]

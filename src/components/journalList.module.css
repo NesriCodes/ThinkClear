@@ -1,0 +1,30 @@
+.container {
+  padding: 50px;
+  width: 70%;
+  margin: 30px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-family: sans-serif;
+}
+.noJournal {
+  font-size: 80px;
+}
+.journals {
+  width: 550px;
+  margin: auto;
+  text-align: center;
+  font-family: sans-serif;
+  color: rgb(177, 177, 177);
+}
+.info {
+  font-size: 30px;
+}
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 95%;
+}
+.expand {
+  height: auto;
+}
