@@ -9,9 +9,11 @@ export default function JournalPanel({
   savedJournal,
   setSavedJournal,
   entries,
-  setEntries,                            
+  setEntries,
+  setSaved,
 }) {
   const [isEditor, setIsEditor] = useState(false);
+  const [edit, setEdit] = useState(false);
 
   return (
     <div className={styles.container}>
@@ -24,9 +26,21 @@ export default function JournalPanel({
           setSavedJournal={setSavedJournal}
           setIsEditor={setIsEditor}
           savedJournal={savedJournal}
+          setSaved={setSaved}
+          edit={edit}
         />
       ) : null}
-      <JournalList savedJournal={savedJournal} />
+      <JournalList
+        savedJournal={savedJournal}
+        setSavedJournal={setSavedJournal}
+        setEdit={setEdit}
+        setIsEditor={setIsEditor}
+        edit={edit}
+        randomPrompt={randomPrompt}
+        entries={entries}
+        setEntries={setEntries}
+        setSaved={setSaved}
+      />
     </div>
   );
 }

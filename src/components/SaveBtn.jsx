@@ -1,8 +1,8 @@
 import styles from "./saveBtn.module.css";
 
-export default function SaveBtn({ setSavedJournal, entries, setSaved }) {
+export default function SaveBtn({ setSavedJournal, savedJournal, entries, setSaved }) {
   function handleClick() {
-    setSavedJournal(entries);
+    setSavedJournal([...savedJournal, entries]);
     setSaved(true);
   }
   return (

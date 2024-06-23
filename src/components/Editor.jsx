@@ -10,13 +10,21 @@ export default function Editor({
   setSavedJournal,
   setIsEditor,
   savedJournal,
+  edit,
+  setSaved,
 }) {
   function handleSubmit(e) {
     e.preventDefault();
-    setSavedJournal([...savedJournal, entries]);
-    setIsEditor(false);
+    const existingEntry = savedJournal.find((entry) => entry === entries);
+
+    if (!existingEntry) {
+      // Entry doesn't exist, add it to the savedJournal
+      setSavedJournal([...savedJournal, entries]);
+    }
     setEntries("");
+    setIsEditor(false);
   }
+
   function handleChange(value) {
     setEntries(value);
   }
@@ -30,7 +38,12 @@ export default function Editor({
           value={entries}
           onChange={handleChange}
         />
-        <SaveBtn />
+        <SaveBtn
+          savedJournal={savedJournal}
+          setSavedJournal={setSavedJournal}
+          entries={entries}
+          setSaved={setSaved}
+        />
       </form>
     </>
   );

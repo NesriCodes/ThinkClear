@@ -37,6 +37,7 @@ function App() {
         setEntries={setEntries}
         setSavedJournal={setSavedJournal}
         savedJournal={savedJournal}
+        setSaved={setSaved}
       />
     </div>
   );
