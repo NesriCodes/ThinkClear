@@ -12,7 +12,6 @@ export default function EditModule({
   savedJournal,
   edit,
   setSaved,
-  randomprompt,
   module,
   setModule,
   index,

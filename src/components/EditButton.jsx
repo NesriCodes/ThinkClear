@@ -1,16 +1,7 @@
-import EditModule from "./EditModule";
 import styles from "./editButton.module.css";
 export default function EditButton({
   index,
-  edit,
   setEdit,
-  setIsEditor,
-  entries,
-  setEntries,
-  setSavedJournal,
-  savedJournal,
-  setSaved,
-  randomPrompt,
   module,
   setModule,
 }) {

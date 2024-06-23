@@ -1,4 +1,4 @@
-  import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import data from "../data/prompt.json";
 import styles from "./randomPrompt.module.css";
 
@@ -19,7 +19,7 @@ export default function RandomPrompt({
     setRandomPromptData(data[randomIndex]);
   }
   return (
-    <div>
+    <div className={styles.big}>
       {randomPrompt !== null && (
         <div className={styles.promptContainer}>
           <p className={styles.promptType}>{data[randomPrompt].type} prompt</p>
@@ -28,6 +28,10 @@ export default function RandomPrompt({
           </h1>
         </div>
       )}
+      <ul className={styles.uList}>
+        <li className={styles.list}>Scroll to write Journal.</li>
+        <li className={styles.list}>Refresh to get new prompt. </li>
+      </ul>
     </div>
   );
 }

@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import styles from "./editor.module.css";
@@ -10,7 +9,6 @@ export default function Editor({
   setSavedJournal,
   setIsEditor,
   savedJournal,
-  edit,
   setSaved,
 }) {
   function handleSubmit(e) {

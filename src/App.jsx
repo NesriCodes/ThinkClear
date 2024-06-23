@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import JournalPanel from "./components/JournalPanel";
 import RandomPrompt from "./components/RandomPrompt";
+import "./app.css";
 
 function App() {
   const [randomPrompt, setRandomPrompt] = useState(null);
