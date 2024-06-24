@@ -12,10 +12,11 @@ export default function JournalList({
   entries,
   setEntries,
   setSaved,
-  randomPrompt
+  randomPrompt, 
 }) {
   const [module, setModule] = useState(true);
   const [expandedIndex, setExpandedIndex] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState();
   function handleExpand(index) {
     setExpandedIndex(expandedIndex === index ? null : index);
   }
@@ -43,6 +44,7 @@ export default function JournalList({
                   edit={edit}
                   module={module}
                   setModule={setModule}
+                  selectedIndex={selectedIndex}
                 />
               </div>
             ) : (
@@ -56,7 +58,7 @@ export default function JournalList({
             ></div>
 
             {expandedIndex === index ? (
-              <div>
+              <div className={styles.buttons}>
                 <DeleteButton
                   index={index}
                   savedJournal={savedJournal}
@@ -75,6 +77,7 @@ export default function JournalList({
                   setSaved={setSaved}
                   module={module}
                   setModule={setModule}
+                  setSelectedIndex={setSelectedIndex}
                 />
               </div>
             ) : (

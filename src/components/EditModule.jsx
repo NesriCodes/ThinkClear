@@ -14,37 +14,32 @@ export default function EditModule({
   setSaved,
   module,
   setModule,
-  index,
+  selectedIndex,
 }) {
-  const [selected, setSelected] = useState(null);
+  const [selectedEntry, setSelectedEntry] = useState("");
 
   useEffect(() => {
-    if (savedJournal) {
-      setSelected(savedJournal[index]);
+    if (savedJournal && savedJournal[selectedIndex]) {
+      setSelectedEntry(savedJournal[selectedIndex]);
     }
-  }, [module, savedJournal, index]);
+  }, [savedJournal, selectedIndex]);
 
   const handleClick = (e) => {
     if (!e.target.closest("form")) {
       setModule(!module);
     }
   };
+
   function handleSubmit(e) {
     e.preventDefault();
 
-    // Create a new array with the updated entry
     const updatedSavedJournal = [...savedJournal];
-    updatedSavedJournal[index] = [selected, entries];
+    updatedSavedJournal[selectedIndex] = selectedEntry.trim();
 
-    // Update the savedJournal state
-    setSavedJournal(updatedSavedJournal);
+    setSavedJournal(updatedSavedJournal.filter((item) => item.trim() !== ""));
 
-    // Reset the entries and editor state
-    if (edit === true) {
-      setEntries("");
-      setIsEditor(false);
-      setModule(!module);
-    }
+    setEntries("");
+    setModule(!module);
   }
 
   return (
@@ -62,8 +57,8 @@ export default function EditModule({
         <ReactQuill
           className={Styles.editor}
           theme="snow"
-          value={selected}
-          onChange={setSelected}
+          value={selectedEntry}
+          onChange={setSelectedEntry}
         />
         <SaveBtn
           savedJournal={savedJournal}

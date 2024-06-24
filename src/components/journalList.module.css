@@ -26,11 +26,9 @@
 .info {
   font-size: 30px;
 }
-.truncate {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 95%;
+.buttons {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .expand {
   height: auto;

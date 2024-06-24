@@ -6,11 +6,10 @@
   background: none;
   border: none;
   outline: none;
-  box-shadow: none; 
+  box-shadow: none;
   border-radius: 6px;
   margin: 10px;
   transition: background 0.5s;
-  margin-top: -50px;
 }
 .btn:hover {
   background: #ff0808;

@@ -4,10 +4,12 @@ export default function EditButton({
   setEdit,
   module,
   setModule,
+  setSelectedIndex,
 }) {
   function handleEdit(index) {
     setEdit(true);
     setModule(!module);
+    setSelectedIndex(index);
   }
   return (
     <div>
